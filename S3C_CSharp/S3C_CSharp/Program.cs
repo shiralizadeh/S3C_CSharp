@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Math;
 
 namespace S3C_CSharp
 {
@@ -16,7 +17,8 @@ namespace S3C_CSharp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new frmMain());
+            Math.Pow(10, 2);
         }
     }
 }
