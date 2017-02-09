@@ -1,4 +1,5 @@
-﻿using System;
+﻿using S3C_CSharp.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -72,6 +73,48 @@ namespace S3C_CSharp
             }
 
             "".ToString();
+        }
+
+        private void btnNewProduct_Click(object sender, EventArgs e)
+        {
+            var foo = new Product() {
+                Count = 10,
+                Buyers = new ProductBuyer[6],
+                Title = "",
+            };
+
+            foo.SetTitle("My Title");
+
+            byte bb = foo.Rate;
+            foo.Rate = 12;
+            foo.Rate = 10;
+            foo.Rate = 5;
+            foo.Rate = 25;
+
+            foo.Count = 25;
+            foo.Count = 0;
+
+            //foo.rate = 255;
+
+            foo.Buyers[0] = new ProductBuyer() {
+                Name = "Ali",
+                Count = 12
+            };
+
+            foo.Buyers[1] = new ProductBuyer()
+            {
+                Name = "Mohamad",
+                Count = 5
+            };
+
+            foo.AddCount(10);
+            foo.AddCount(5, "123");
+
+
+            var f = foo["Mohamad"];
+
+            "".ToString();
+
         }
     }
 }

@@ -30,6 +30,9 @@
         {
             this.btnAlert = new System.Windows.Forms.Button();
             this.txtInput = new System.Windows.Forms.TextBox();
+            this.btnNewProduct = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAlert
@@ -49,11 +52,42 @@
             this.txtInput.Size = new System.Drawing.Size(162, 20);
             this.txtInput.TabIndex = 1;
             // 
+            // btnNewProduct
+            // 
+            this.btnNewProduct.Location = new System.Drawing.Point(287, 45);
+            this.btnNewProduct.Name = "btnNewProduct";
+            this.btnNewProduct.Size = new System.Drawing.Size(128, 23);
+            this.btnNewProduct.TabIndex = 2;
+            this.btnNewProduct.Text = "New Product";
+            this.btnNewProduct.UseVisualStyleBackColor = true;
+            this.btnNewProduct.Click += new System.EventHandler(this.btnNewProduct_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(287, 74);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "New Product";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(287, 103);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(128, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "New Product";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(939, 365);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnNewProduct);
             this.Controls.Add(this.txtInput);
             this.Controls.Add(this.btnAlert);
             this.Name = "frmMain";
@@ -67,5 +101,8 @@
 
         private System.Windows.Forms.Button btnAlert;
         private System.Windows.Forms.TextBox txtInput;
+        private System.Windows.Forms.Button btnNewProduct;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
