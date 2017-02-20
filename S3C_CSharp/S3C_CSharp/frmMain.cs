@@ -116,5 +116,45 @@ namespace S3C_CSharp
             "".ToString();
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var s = default(int);
+
+            var test = new ListManager<Product, long>();
+
+            test.Add(new Product() { Title = "A" });
+            test.Add(new Product() { Title = "B" });
+            test.Add(new Product() { Title = "C" });
+
+            test.Count.ToString();
+
+            var userManager = new ListManager<User, int>();
+
+            userManager.Add(new User() { Username = "A" });
+            userManager.Add(new User() { Username = "B" });
+            userManager.Add(new User() { Username = "C" });
+
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                //Log("Count " + nameof(test) + ": " + test.GetCount());
+                //Log("Count productManager: " + test.GetCount());
+                throw;
+            }
+
+        }
+    }
+
+    class MyClass : ListManager<Product, long>
+    {
+        public override void Add(Product product)
+        {
+            base.list[base.index++ + 2] = product;
+            base.Add(product);
+        }
     }
 }
