@@ -77,11 +77,34 @@ namespace S3C_CSharp
 
         private void btnNewProduct_Click(object sender, EventArgs e)
         {
-            var foo = new Product() {
+            var foo = new Product()
+            {
                 Count = 10,
                 Buyers = new ProductBuyer[6],
-                Title = "",
+                Title = "Phone",
             };
+
+            var vv = (ViewProduct)foo;
+
+            long w = (long)foo;
+            //long y = foo as long;
+
+            var bar = new Product()
+            {
+                Count = 3,
+                Buyers = new ProductBuyer[6],
+                Title = "Car",
+            };
+
+            long test1 = foo + bar;
+            Product test2 = foo + 60;
+
+            test2 = (Product)foo.Clone();
+
+            var a = (test2.Equals(foo));
+            var b = (test2 == foo);
+
+            var isExits = Convert.ToBoolean(foo, null);
 
             foo.SetTitle("My Title");
 
@@ -96,7 +119,8 @@ namespace S3C_CSharp
 
             //foo.rate = 255;
 
-            foo.Buyers[0] = new ProductBuyer() {
+            foo.Buyers[0] = new ProductBuyer()
+            {
                 Name = "Ali",
                 Count = 12
             };
