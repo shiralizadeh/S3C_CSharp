@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dates.Designer.cs">
+      <DependentUpon>Dates.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dates.resx">
+      <DependentUpon>Dates.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,6 +92,10 @@
     <ProjectReference Include="..\S3C_CSharp.Models\S3C_CSharp.Models.csproj">
       <Project>{3bb6cfaa-33ab-4445-a5e2-cdf80bc6def0}</Project>
       <Name>S3C_CSharp.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\S3C_CSharp.Utilities\S3C_CSharp.Utilities.csproj">
+      <Project>{d27598f2-a083-4cb7-b1c3-79af4c5cdbcd}</Project>
+      <Name>S3C_CSharp.Utilities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

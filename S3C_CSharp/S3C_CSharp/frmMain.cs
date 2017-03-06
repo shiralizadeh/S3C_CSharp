@@ -84,7 +84,7 @@ namespace S3C_CSharp
                 Title = "Phone",
             };
 
-            var vv = (ViewProduct)foo;
+            //var vv = (ViewProduct)foo;
 
             long w = (long)foo;
             //long y = foo as long;
@@ -170,6 +170,18 @@ namespace S3C_CSharp
                 throw;
             }
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var list = new List<string>(1000);
+
+            list.Add("sdfgsdf");
+            list.Add("dfgdfgdf");
+
+            String.Format(new System.Globalization.CultureInfo("fa-ir"), "جناب آقای/خانم {0} خوش آمدید.", "علی");
+
+            $"جناب آقای/خانم {DateTime.Now} خوش آمدید.".ToString();
         }
     }
 
