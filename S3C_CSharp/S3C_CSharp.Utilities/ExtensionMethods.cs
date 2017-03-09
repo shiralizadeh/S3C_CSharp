@@ -41,5 +41,10 @@ namespace S3C_CSharp.Utilities
             form.StartPosition = FormStartPosition.Manual;
             form.Bounds = Screen.AllScreens[screen].Bounds;
         }
+
+        public static int ToInt(this string str)
+        {
+            return int.Parse(str);
+        }
     }
 }
