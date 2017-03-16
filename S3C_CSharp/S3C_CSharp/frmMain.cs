@@ -1,4 +1,5 @@
 ﻿using S3C_CSharp.Models;
+//using S3C_CSharp.Utilities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +12,7 @@ using System.Windows.Forms;
 
 namespace S3C_CSharp
 {
+    [Utilities.Role("User")]
     public partial class frmMain : Form
     {
         public frmMain()
@@ -182,6 +184,23 @@ namespace S3C_CSharp
             String.Format(new System.Globalization.CultureInfo("fa-ir"), "جناب آقای/خانم {0} خوش آمدید.", "علی");
 
             $"جناب آقای/خانم {DateTime.Now} خوش آمدید.".ToString();
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var f = new Dates();
+
+            if (Program.CheckForm(f))
+            {
+                f.Show();
+            }
+            else
+                MessageBox.Show("شما دسترسی به این فرم ندارید");
         }
     }
 

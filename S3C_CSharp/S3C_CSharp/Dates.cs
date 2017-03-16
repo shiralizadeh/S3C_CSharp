@@ -12,6 +12,7 @@ using System.Windows.Forms;
 
 namespace S3C_CSharp
 {
+    [Role("Accounting")]
     public partial class Dates : Form
     {
         public Dates()
@@ -25,11 +26,15 @@ namespace S3C_CSharp
 
             var date = DateTime.Now;
 
-            textBox1.Text = date.ToShamsi();
+            //textBox1.Text = date.ToShamsi();
 
-            textBox1.Text = "cameCase".SpaceOutCamelCasing();
+            //textBox1.Text = "cameCase".SpaceOutCamelCasing();
         }
 
+        public void Clear()
+        {
+            textBox1.Text = "";
+        }
        
     }
 }
